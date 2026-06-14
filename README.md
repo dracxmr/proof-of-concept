@@ -6,10 +6,15 @@ A collection of my automation scripts and virtual lab configurations for Windows
 
 ### 1. Active Directory Automation
 - **ActiveDirectory-Mass-Provisioning-Script:** Automated 1,000+ user account creation and OU management.
+![AD Mass Provisioning Screenshot](./ActiveDirectory-Mass-Provisioning-Script.jpeg)
+
 - **CSV-to-AD-Bulk-Importer:** Robust bulk import tool with `try/catch` error handling for existing accounts.
+![CSV to AD Importer Screenshot](./CSV-to-AD-Bulk-Importer.jpeg)
 
 ### 2. Lab Infrastructure
 - **Multi-Distro-Lab-SSH-Automation:** Configured NAT port forwarding for centralized SSH management of multiple Linux VMs.
+![Multi Distro Lab SSH Screenshot](./proof%20of%20concept%20port%20forwarding%20VM.jpeg)
+
 - **Lab Management Tool:** Inventory tracking script for host/guest port mappings.
 
 ## Proof of Concept
