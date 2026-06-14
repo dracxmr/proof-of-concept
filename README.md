@@ -22,4 +22,4 @@ A collection of my automation scripts and virtual lab configurations for Windows
 ![Lab Management Tool Screenshot](./Lab%20Management%20Tool.jpeg)
 
 ## Proof of Concept
-I have included screenshots verifying my manual hypervisor configurations, network routing rules, and Active Directory scripting environments.
+I have included screenshots verifying my manual type 2 hypervisor configurations, network routing rules, and Active Directory scripting environments.
