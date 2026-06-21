@@ -5,9 +5,9 @@ A collection of my automation scripts and virtual lab configurations for Windows
 ## Projects
 
 ### 0. Dracs VmMt (Virtual Machine Management Tool)
-- **Dracs-VmMt:** A centralized orchestration and tracking tool for virtual lab environments. Features include batch startup of VMs, individual VM control, and an integrated lookup dashboard for tracking NAT port forwarding rules, allowing for quick SSH connections without having to manually check hypervisor settings for each lab. Currently supports VirtualBox, with V2.0 expansion into VMware integration in development.
+- **Dracs-VmMt:** A centralized orchestration and tracking tool for virtual lab environments. Features include batch startup of VMs, individual VM control, activity logs, and an integrated lookup dashboard for tracking NAT port forwarding rules, allowing for quick SSH connections without having to manually check hypervisor settings for each lab. Currently supports VirtualBox and VMware.
 
-[![Dracs VmMt Showcase](https://img.youtube.com/vi/CGiZnRA7y6k/0.jpg)](https://www.youtube.com/shorts/CGiZnRA7y6k)
+[![Dracs VmMt Showcase](https://img.youtube.com/vi/xXHvN6mT1cM/0.jpg)](https://www.youtube.com/shorts/xXHvN6mT1cM)
 
 ### 1. Active Directory Automation
 - **ActiveDirectory-Mass-Provisioning-Script:** Automated 1,000+ user account creation and OU management.
