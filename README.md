@@ -5,6 +5,14 @@ A collection of my automation scripts and virtual lab configurations for Windows
 ## Projects
 
 ### 1. Security & Management Tools
+
+- **Dracs-GEO:** A geolocation and threat intelligence tool designed to visualize and identify the origin of IP addresses in real-time. It provides actionable threat intelligence, allowing users to input multiple IP addresses to map their geographic locations, identify associated service providers, and calculate a threat score based on indicators like proxy status and known malicious patterns.
+    - **Interactive Globe Visualization:** Dynamic mapping interface to track incoming traffic origins.
+    - **Intelligence Reporting:** Instant lookup for ISP, region, city, and host data.
+    - **Export Functionality:** Ability to generate and export detailed threat intelligence reports into local text files for further analysis.
+
+[![Dracs GEO Showcase](https://img.youtube.com/vi/8aEjsWjwrtI/0.jpg)](https://www.youtube.com/watch?v=8aEjsWjwrtI)
+
 - **Dracs-IDS (Intrusion Detection System):** A custom-developed network intrusion detection suite designed for robust security monitoring. The application provides real-time traffic analysis, packet monitoring, and a centralized dashboard to track threat levels. Key features include:
     - **Real-Time Monitoring:** Live visualization of packet flow and network activity as demonstrated in "Dracs IDS demo.mp4".
     - **Threat Intelligence:** Automated detection of malicious patterns, including SYN floods and port scanning, with categorized severity alerts (Low to Critical).
@@ -15,7 +23,7 @@ A collection of my automation scripts and virtual lab configurations for Windows
 
 - **Dracs-VmMt (Virtual Machine Management Tool):** A centralized orchestration and tracking tool for virtual lab environments. Features include batch startup of VMs, individual VM control, activity logs, and an integrated lookup dashboard for tracking NAT port forwarding rules, allowing for quick SSH connections without having to manually check hypervisor settings for each lab. Currently supports VirtualBox and VMware.
 
-[![Dracs VmMt Showcase](https://img.youtube.com/vi/xXHvN6mT1cM/0.jpg)](https://www.youtube.com/shorts/xXHvN6mT1cM)
+[![Dracs VmMt Showcase](https://img.youtube.com/vi/xXHvN6mT1cM/0.jpg)](https://www.youtube.com/watch?v=xXHvN6mT1cM)
 
 ### 2. Active Directory Automation
 - **ActiveDirectory-Mass-Provisioning-Script:** Automated 1,000+ user account creation and OU management.
@@ -35,4 +43,4 @@ A collection of my automation scripts and virtual lab configurations for Windows
 ![Lab Management Tool Screenshot](./Lab%20Management%20Tool.jpeg)
 
 ## Proof of Concept
-I have included screenshots verifying my manual type 2 hypervisor configurations, network routing rules, and Active Directory scripting environments.
+This portfolio includes a collection of video demonstrations and verified screenshots showcasing my custom geolocation and threat intelligence tools, real-time network intrusion detection, virtual machine orchestration, type 2 hypervisor configurations, network routing rules, and Active Directory scripting environments.
