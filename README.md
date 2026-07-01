@@ -1,46 +1,63 @@
 # POC Portfolio
 
-A collection of my automation scripts and virtual lab configurations for Windows Server 2022 and Linux environments.
+A collection of infrastructure automation scripts, security simulation tools, and virtual lab configurations targeting Windows Server 2022 and enterprise Linux environments.
 
 ## Projects
 
-### 1. Security & Management Tools
+### 1. Offensive Security & Adversary Simulation Engineering
 
-- **Dracs-GEO:** A geolocation and threat intelligence tool designed to visualize and identify the origin of IP addresses in real-time. It provides actionable threat intelligence, allowing users to input multiple IP addresses to map their geographic locations, identify associated service providers, and calculate a threat score based on indicators like proxy status and known malicious patterns.
-    - **Interactive Globe Visualization:** Dynamic mapping interface to track incoming traffic origins.
-    - **Intelligence Reporting:** Instant lookup for ISP, region, city, and host data.
-    - **Export Functionality:** Ability to generate and export detailed threat intelligence reports into local text files for further analysis.
+* **Drac's Eye | Custom C2 Research Framework**
+  An offensive Command and Control (C2) simulation framework built from the ground up to research adversary techniques, validate defensive posture, and demonstrate how advanced threats maintain persistence and execute post-exploitation activities in controlled environments.
+  * **Centralized Session Orchestration:** A custom control plane interface designed to monitor, track, and manage persistent agent beacons across simulated target environments.
+  * **Defensive Evasion Research:** Implements conceptual runtime memory patching mechanics—including AMSI (Antimalware Scan Interface) and ETW (Event Tracing for Windows) bypasses—to analyze how modern endpoints detect evasion techniques.
+  * **Post-Exploitation Triage Modules:** Features modular capability testing for security assessment, including local credential auditing (browser, credential manager, and Wi-Fi data), keystroke capture simulation, and hardware telemetry gathering (webcam/microphone validation).
+  * **Lateral Reconnaissance Engine:** Embedded network assessment utilities, such as automated ARP scanning, allowing security operators to map out adjacent live hosts from a compromised node during internal assessments.
 
-[![Dracs GEO Showcase](https://img.youtube.com/vi/8aEjsWjwrtI/0.jpg)](https://www.youtube.com/watch?v=8aEjsWjwrtI)
+[![Drac's Eye Showcase](https://img.youtube.com/vi/tzHiZBDCOCE/0.jpg)](https://www.youtube.com/watch?v=tzHiZBDCOCE)
 
-- **Dracs-IDS (Intrusion Detection System):** A custom-developed network intrusion detection suite designed for robust security monitoring. The application provides real-time traffic analysis, packet monitoring, and a centralized dashboard to track threat levels. Key features include:
-    - **Real-Time Monitoring:** Live visualization of packet flow and network activity as demonstrated in "Dracs IDS demo.mp4".
-    - **Threat Intelligence:** Automated detection of malicious patterns, including SYN floods and port scanning, with categorized severity alerts (Low to Critical).
-    - **Configurable Scanning & Security:** Integrated Nmap support for network scanning, customizable port thresholds, ARP spoofing detection, and blacklisting capabilities.
-    - **Alert Management:** Instant notification system for potential policy violations or unauthorized access attempts.
+---
 
-[![Dracs IDS Showcase](https://img.youtube.com/vi/05C5EWmmYpI/0.jpg)](https://www.youtube.com/watch?v=05C5EWmmYpI)
+### 2. Security & Threat Intelligence Engineering
 
-- **Dracs-VmMt (Virtual Machine Management Tool):** A centralized orchestration and tracking tool for virtual lab environments. Features include batch startup of VMs, individual VM control, activity logs, and an integrated lookup dashboard for tracking NAT port forwarding rules, allowing for quick SSH connections without having to manually check hypervisor settings for each lab. Currently supports VirtualBox and VMware.
+* **Dracs-GEO | Geolocation & Threat Intelligence Tool**
+  A real-time threat intelligence application designed to aggregate, visualize, and analyze malicious network traffic. Users can ingest bulk IP address data to assess global risk vectors.
+  * **Interactive Visualization:** Dynamic mapping interface tracking geographic traffic origins.
+  * **Intelligence Reporting:** Instant metadata extraction for ISPs, Autonomous System Numbers (ASNs), geographic regions, and hosting providers.
+  * **Data Export:** Generates structured threat intelligence reports into local text files for forensic analysis.
+  
+  [![Dracs GEO Showcase](https://img.youtube.com/vi/8aEjsWjwrtI/0.jpg)](https://www.youtube.com/watch?v=8aEjsWjwrtI)
 
-[![Dracs VmMt Showcase](https://img.youtube.com/vi/xXHvN6mT1cM/0.jpg)](https://www.youtube.com/watch?v=xXHvN6mT1cM)
+* **Dracs-IDS | Network Intrusion Detection System**
+  A custom-developed network intrusion detection suite built for live traffic analysis and protocol monitoring.
+  * **Real-Time Telemetry:** Live visualization of packet flow and network activity.
+  * **Signature & Behavioral Detection:** Automated identification of malicious patterns (e.g., SYN floods, ARP spoofing, and port scanning) with categorized severity alerts (Low to Critical).
+  * **Network Reconnaissance Interface:** Integrated Nmap support for managed asset scanning, customizable port thresholds, and IP blacklisting capabilities.
+  
+  [![Dracs IDS Showcase](https://img.youtube.com/vi/05C5EWmmYpI/0.jpg)](https://www.youtube.com/watch?v=05C5EWmmYpI)
 
-### 2. Active Directory Automation
-- **ActiveDirectory-Mass-Provisioning-Script:** Automated 1,000+ user account creation and OU management.
+* **Dracs-VmMt | Virtual Machine Management & Orchestration**
+  A centralized control plane and orchestration tool for managing virtual sandboxes across Type-2 hypervisors (VirtualBox and VMware).
+  * **Batch Lifecycle Operations:** Automated mass startup, teardown, and individual execution control for target VMs.
+  * **Network Mapping Lookup:** Integrated dashboard tracking NAT port forwarding rules, enabling rapid SSH access without manual hypervisor inspection.
+  
+  [![Dracs VmMt Showcase](https://img.youtube.com/vi/xXHvN6mT1cM/0.jpg)](https://www.youtube.com/watch?v=xXHvN6mT1cM)
+
+### 3. Identity & Access Management (IAM) Automation
+* **ActiveDirectory-Mass-Provisioning-Script:** PowerShell script automating the generation of 1,000+ user objects, directory structures, and OU management.
 ![AD Mass Provisioning Screenshot](./ActiveDirectory-Mass-Provisioning-Script.jpeg)
 
-- **CSV-to-AD-Bulk-Importer:** Robust bulk import tool with `try/catch` error handling for existing accounts.
+* **CSV-to-AD-Bulk-Importer:** Identity migration tool utilizing structured `try/catch` exception handling to manage pre-existing directory accounts and formatting anomalies.
 ![CSV to AD Importer Screenshot](./CSV-to-AD-Bulk-Importer.jpeg)
 
-### 3. Lab Infrastructure & Networking
-- **Multi-Distro-VirtualBox-Lab:** Configured virtualized network environments running multiple Linux distributions (Arch, Kali, Debian, Ubuntu, Fedora Server).
+### 4. Advanced Networking & Lab Infrastructure
+* **Multi-Distro-VirtualBox-Lab:** Configured and maintained virtualized test networks running heterogeneous Linux distributions (Arch, Kali, Debian, Ubuntu, Fedora Server).
 ![VirtualBox Environment](./virtualbox-labs.jpeg)
 
-- **NAT Port Forwarding Configuration:** Implemented custom NAT port forwarding rules (e.g., mapping Host Port 2224 to Guest Port 22) to allow external SSH connectivity into isolated test environments.
+* **Edge NAT Port Forwarding:** Implementation of custom NAT routing schemas (e.g., mapping Host Port `2224` to Guest Port `22`) to provide secure external access to isolated host segments.
 ![Port Forwarding Config](./port-forwarding-config.jpeg)
 
-- **Lab Management Tool:** Inventory tracking script for host/guest port mappings.
+* **Inventory Tracking Script:** A companion script mapping current host/guest socket connections to simplify lab inventory tracking.
 ![Lab Management Tool Screenshot](./Lab%20Management%20Tool.jpeg)
 
 ## Proof of Concept
-This portfolio includes a collection of video demonstrations and verified screenshots showcasing my custom geolocation and threat intelligence tools, real-time network intrusion detection, virtual machine orchestration, type 2 hypervisor configurations, network routing rules, and Active Directory scripting environments.
+This portfolio includes a collection of video demonstrations and verified screenshots showcasing my custom offensive research simulation frameworks, geolocation threat intelligence tools, real-time network intrusion detection, virtual machine orchestration, type 2 hypervisor configurations, network routing rules, and Active Directory scripting environments.
